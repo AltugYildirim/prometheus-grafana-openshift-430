@@ -2,11 +2,7 @@ apiVersion: integreatly.org/v1alpha1
 kind: GrafanaDataSource
 metadata:
   name: grafana-datasource
-  namespace: dev-gan-ns
-  labels:
-    name: grafana-datasource
-    app: grafana-app
-    project: g-monitoring-project
+  namespace: prometheus-operator
 spec:
   name: middleware-abc.yaml
   datasources:
@@ -17,7 +13,7 @@ spec:
         timeInterval: 5s
       name: Prometheus
       type: prometheus
-      url: 'http://prometheus-operated:9090'
+      url: 'http://prometheus:9090'
       version: 1
       editable: true
       jsonData:
