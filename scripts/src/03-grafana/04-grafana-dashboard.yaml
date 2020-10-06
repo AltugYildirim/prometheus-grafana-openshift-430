@@ -2,11 +2,7 @@ apiVersion: integreatly.org/v1alpha1
 kind: GrafanaDashboard
 metadata:
   name: sample-grafana-dashboard
-  namespace: dev-gan-ns
-  labels:
-    name: sample-grafana-dashboard
-    app: grafana-app
-    project: g-monitoring-project
+  namespace: prometheus-operator
 spec:
   name: sample-dashboard.json
   json: >
